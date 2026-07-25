@@ -1,5 +1,51 @@
 [
   {
+    "name": "cadons-ctus",
+    "version": "1.0.1",
+    "port_version": 0,
+    "description": "Library implementing the tus protocol for resumable uploads",
+    "homepage": "https://github.com/Cadons/ctus",
+    "license": "MIT",
+    "dependencies": [
+      {
+        "name": "boost-lexical-cast",
+        "host": false
+      },
+      {
+        "name": "boost-uuid",
+        "host": false
+      },
+      {
+        "name": "curl",
+        "host": false
+      },
+      {
+        "name": "fmt",
+        "host": false
+      },
+      {
+        "name": "glog",
+        "host": false
+      },
+      {
+        "name": "libzippp",
+        "host": false
+      },
+      {
+        "name": "nlohmann-json",
+        "host": false
+      },
+      {
+        "name": "vcpkg-cmake",
+        "host": true
+      },
+      {
+        "name": "vcpkg-cmake-config",
+        "host": true
+      }
+    ]
+  },
+  {
     "name": "docraft",
     "version": "v1.0.0-RC2",
     "port_version": 0,

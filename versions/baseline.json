@@ -1,5 +1,9 @@
 {
   "default": {
+    "cadons-ctus": {
+      "baseline": "1.0.1",
+      "port-version": 0
+    },
     "docraft": {
       "baseline": "v1.0.0-RC2",
       "port-version": 0
