@@ -2,6 +2,8 @@
 
 A custom [vcpkg](https://github.com/microsoft/vcpkg) registry hosting private/third-party ports, following the standard vcpkg registry layout:
 
+Browse the available packages at **https://cadons.github.io/vcpkg-registry/**.
+
 ```
 ports/
   <port>/
@@ -14,7 +16,13 @@ versions/
 scripts/
   update_port.py          # bump a port to a new upstream release
   update_versions_db.py   # (re)generate version DB entries without bumping
+  generate_pages_data.py  # regenerate docs/packages.json for the GitHub Pages site
   lib/vcpkg_tool.py        # shared helper, not meant to be run directly
+docs/
+  index.html               # GitHub Pages package browser (markup only)
+  packages.json            # generated data, fetched by js/data.js
+  css/                      # variables.css, base.css, layout.css, card.css
+  js/                       # ES modules: main.js is the entry point
 ```
 
 ## Using this registry in a project
@@ -104,6 +112,17 @@ python3 scripts/update_versions_db.py --commit <port1> <port2>
 1. Create `ports/<port>/vcpkg.json` and `ports/<port>/portfile.cmake` by hand (see any existing port under `ports/` as a reference).
 2. Run `python3 scripts/update_versions_db.py <port>` to generate its initial `versions/<letter>-/<port>.json` entry and add it to `versions/baseline.json`.
 3. Review and commit.
+
+## Package browser (GitHub Pages)
+
+`docs/` is a static site listing every port in the registry with its description, license, dependencies, and ready-to-copy setup snippets — published at https://cadons.github.io/vcpkg-registry/.
+
+It's generated, not hand-maintained: `scripts/generate_pages_data.py` scans `ports/` and `versions/baseline.json` to (re)build `docs/packages.json`, which `docs/index.html` renders client-side. The `.github/workflows/pages.yml` workflow runs that script and deploys `docs/` to Pages automatically on every push to `main` that touches `ports/`, `versions/baseline.json`, or `docs/`. To preview locally:
+
+```sh
+python3 scripts/generate_pages_data.py
+python3 -m http.server -d docs 8000   # open http://localhost:8000
+```
 
 ## Requirements
 

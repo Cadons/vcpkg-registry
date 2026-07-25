@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vcpkg-registry — Cadons</title>
+<meta name="description" content="Browse the ports available in the Cadons vcpkg-registry, a custom vcpkg registry for private/third-party C++ libraries.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+
+<header>
+  <h1>📦 vcpkg-registry</h1>
+  <p>
+    A custom <a href="https://github.com/microsoft/vcpkg" target="_blank" rel="noopener">vcpkg</a>
+    registry hosting private/third-party C++ ports, maintained by
+    <a href="https://github.com/Cadons" target="_blank" rel="noopener">Cadons</a>.
+    Browse the packages below and copy the snippets to pull them into your project.
+  </p>
+  <div class="links">
+    <a href="https://github.com/Cadons/vcpkg-registry" target="_blank" rel="noopener">Repository ↗</a>
+    <a href="https://github.com/Cadons/vcpkg-registry#using-this-registry-in-a-project" target="_blank" rel="noopener">Setup guide ↗</a>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search packages…" autocomplete="off">
+    <span id="count"></span>
+  </div>
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty" hidden>No packages match your search.</div>
+</main>
+
+<footer>
+  Generated from <code>ports/</code> and <code>versions/baseline.json</code> by
+  <code>scripts/generate_pages_data.py</code>. See the
+  <a href="https://github.com/Cadons/vcpkg-registry" target="_blank" rel="noopener">repository README</a>
+  for full registry setup instructions.
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

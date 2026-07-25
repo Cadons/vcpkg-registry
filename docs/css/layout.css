@@ -1,0 +1,93 @@
+header {
+  padding: 3rem 1.5rem 2rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 1.9rem;
+  margin: 0 0 .4rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+header p {
+  color: var(--text-dim);
+  margin: 0 0 1.5rem;
+  max-width: 60ch;
+  line-height: 1.5;
+}
+
+header .links {
+  display: flex;
+  gap: 1rem;
+  font-size: .9rem;
+}
+
+header .links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+header .links a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+#search {
+  flex: 1;
+  padding: .65rem .9rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text);
+  font-size: .95rem;
+}
+
+#search:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+#count {
+  color: var(--text-dim);
+  font-size: .85rem;
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 3rem 1rem;
+}
+
+footer {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  color: var(--text-dim);
+  font-size: .8rem;
+  border-top: 1px solid var(--border);
+}
+
+footer a {
+  color: var(--accent);
+}
