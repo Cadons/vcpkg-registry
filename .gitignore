@@ -24,3 +24,7 @@ CMakeUserPresets.json
 __pycache__/
 *.pyc
 .vcpkg-tool
+
+.vscode
+.idea
+.vs
