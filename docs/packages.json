@@ -47,7 +47,7 @@
   },
   {
     "name": "docraft",
-    "version": "v1.0.0-RC2",
+    "version": "v1.0.0-RC3",
     "port_version": 0,
     "description": "Docraft is a self-contained C++ library for generating professionally rendered PDF documents \u2014 without external tools, command-line utilities, or runtime dependencies beyond your own application",
     "homepage": "https://cadons.github.io/Docraft/",
